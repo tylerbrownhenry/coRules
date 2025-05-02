@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "node-mcp-server": {
+      "command": "npx",
+      "args": ["ts-node", "src/mcp/app.ts"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+## editing-docs Rule
+
+When editing any files within the `/docs` directory, follow these procedures:
+
+1.  **Related Section Updates:**
+    *   **Sub-topic Changes:** If adding or removing a documentation file (`.md`) within a topic directory, check the index file of that parent directory (the `.md` file with the same name as the directory, e.g., `docs/topic-name/topic-name.md`). Update the "Related" section in that index file to accurately reflect the addition or removal by adding or removing the corresponding link. Review the "Related" sections of *other* files within the *same* directory to ensure consistency and update links if necessary (e.g., if a file was renamed).
+    *   **Topic Changes:** If adding, removing, or renaming a main topic directory or its index file (e.g., `docs/topic-name/topic-name.md`), check the root index file (`docs/index.md`). Update the list of topics in `docs/index.md` to accurately reflect the change.
+
+2.  **Naming Conventions:**
+    *   Ensure all folder and file names within `/docs` use `kebab-case`.
+    *   Ensure the structure follows the established pattern:
+        *   Root index: `docs/index.md`
+        *   Folders for main topics: `docs/topic-name/`
+        *   Index file for main topic: `docs/topic-name/topic-name.md`
+        *   Sub-topic files: `docs/topic-name/sub-topic-name.md`
+    *   **Enforcement:** If prompted to perform an action (like creating a file or folder) that violates these naming or structural conventions (e.g., using a name like `daisyDaisy-daisy/come-on___daisy`), reject the request and state the specific convention that would be violated (e.g., "Request rejected: Folder and file names must use kebab-case.").
+
+3.  **Integrity and Scope:**
+    *   We have a strict structure to the docs and to maintain integrity we must be sure to keep the relationships between the files always in sync. We want to have the docs in small consumable pieces so that when providing instructions we can limit the scope of what is needed to be provided.
+
+This rule ensures that the documentation structure remains consistent and navigable as files are added, removed, or modified.

@@ -1,0 +1,44 @@
+# Copilot Instructions for Node MCP Application
+
+This project follows the Model-Context-Protocol (MCP) architecture. Please adhere to these guidelines:
+
+## MCP Architecture Pattern
+
+- **Models** (`src/models/`): Define data structures and their domain behaviors. Models should be independent of persistence mechanisms. They implement interfaces/protocols defined in `src/models/interfaces/`. Implementations go in `src/models/implementations/`.
+
+- **Contexts** (`src/contexts/`): Handle persistence and state management. Abstract storage mechanisms (database, API, etc.) behind consistent interfaces. Base context interfaces go in `src/contexts/base/`, implementations in `src/contexts/providers/`.
+
+- **Views** (`src/views/`): Present data to users and handle interaction, translating user actions into operations on Models or Services. Typically consume Services rather than directly using Contexts.
+
+- **Services** (`src/services/`): Implement business logic that spans multiple models or requires context access. Services orchestrate operations and integrate with external systems.
+
+## Key Patterns & Conventions
+
+- **Dependency Injection**: Components should receive their dependencies rather than creating them.
+- **Convention over Configuration**: Follow established naming and structure conventions.
+- **Single Responsibility**: Each file should define a single logical component.
+- **Naming Conventions**:
+  - Files: `kebab-case.js`
+  - Classes/Interfaces: `PascalCase`
+  - Variables/Functions: `camelCase`
+  - File suffixes: `-model.js`, `-context.js`, etc.
+- **Auto-Discovery**: Use established patterns for component registration.
+
+## Other Guidelines
+
+- Use the centralized logger (`src/utils/logger.js`) for all logging.
+- Access configuration via `config/default.json`, not hardcoded values.
+- Write unit tests for all components (in `tests/unit/`).
+- Follow ESLint rules for consistent code style.
+
+## Additional Guidelines
+
+For more detailed rules and guidelines, please refer to the Cursor rules in `.cursor/rules/`:
+
+- `typescript.cursor-rules.md`: TypeScript-specific guidelines
+- `mcp-development-guidelines.cursor-rules.md`: Detailed MCP architecture rules
+- `editing-*.cursor-rules.md`: Component-specific editing guidelines
+
+These rules provide more detailed guidance for specific aspects of development.
+
+Thank you for following these guidelines!

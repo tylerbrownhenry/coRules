@@ -1,0 +1,106 @@
+{
+  // Editor settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.rulers": [100],
+  "editor.tabSize": 2,
+
+  // ESLint settings
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Files settings
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+
+  // JavaScript/TypeScript settings
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+
+  // GitHub Copilot settings
+  "github.copilot.enable": {
+    "*": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // File Explorer settings
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.js": "${capture}.test.js, ${capture}.spec.js",
+    "*.ts": "${capture}.test.ts, ${capture}.spec.ts",
+    "package.json": "package-lock.json, yarn.lock, .npmrc"
+  },
+
+  // Custom folder colors for MCP architecture
+  "workbench.colorCustomizations": {
+    "explorer.decorations.colors.foreground": "#FFFFFF"
+  },
+  "material-icon-theme.folders.associations": {
+    "models": "Class",
+    "controllers": "Controller",
+    "presenters": "Views",
+    "contexts": "Database",
+    "utils": "Utils",
+    "interfaces": "Interface"
+  },
+
+  // Search exclude patterns
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true
+  },
+
+  // Code snippets settings
+  "editor.snippetSuggestions": "top",
+
+  // Improved terminal settings
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // Recommended extensions
+  "extensions.ignoreRecommendations": false,
+  "extensions.recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "github.copilot",
+    "github.copilot-chat",
+    "pkief.material-icon-theme",
+    "streetsidesoftware.code-spell-checker"
+  ],
+
+  // File associations
+  "files.associations": {
+    "*.context.js": "javascript",
+    "*.model.js": "javascript",
+    "*.presenter.js": "javascript",
+    "*.controller.js": "javascript"
+  },
+
+  // Auto-generated file headers
+  "fileHeaderComment.parameter": {
+    "*": {
+      "commentbegin": "/**",
+      "commentprefix": " * ",
+      "commentend": " */",
+      "author": "Project Team"
+    }
+  },
+
+  // Performance settings
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  }
+}
