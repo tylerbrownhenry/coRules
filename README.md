@@ -1,0 +1,2 @@
+# coRules
+IDE Rules
